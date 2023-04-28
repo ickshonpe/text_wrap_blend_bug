@@ -9,9 +9,22 @@ fn main() {
 
 fn setup(mut commands: Commands) {
     commands.spawn(Camera2dBundle::default());
-    for (i, (position_type, message)) in [
-        (PositionType::Relative, "Relative Positioning\nRelative Positioning"),
-        (PositionType::Absolute, "Absolute Positioning\nAbsolute Positioning"),
+    for (i, (position_type, message, right)) in [
+        (
+            PositionType::Relative,
+            "Relative Positioning\nRelative Positioning",
+            Val::Auto,
+        ),
+        (
+            PositionType::Absolute,
+            "Absolute Positioning\nAbsolute Positioning",
+            Val::Auto,
+        ),
+        (
+            PositionType::Absolute,
+            "Absolute Positioning\nAbsolute Positioning",
+            Val::Px(0.),
+        ),
     ]
     .into_iter()
     .enumerate()
@@ -23,6 +36,7 @@ fn setup(mut commands: Commands) {
                     position_type: PositionType::Absolute,
                     top: Val::Px(10.),
                     left: Val::Px(10. + x),
+                    right,
                     ..default()
                 },
                 background_color: Color::MAROON.into(),
@@ -35,7 +49,6 @@ fn setup(mut commands: Commands) {
                             position_type,
                             ..default()
                         })
-                        
                         .with_background_color(Color::DARK_GREEN),
                 );
             });
