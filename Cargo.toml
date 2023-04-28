@@ -1,0 +1,9 @@
+[package]
+name = "text_wrap_blend_bug"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = { git = "https://github.com/bevyengine/bevy", rev = "670f3f0dce2ced27388b10672d30594d399434e1" }
