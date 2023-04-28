@@ -10,8 +10,8 @@ fn main() {
 fn setup(mut commands: Commands) {
     commands.spawn(Camera2dBundle::default());
     for (i, (position_type, message)) in [
-        (PositionType::Relative, "Relative Positioning"),
-        (PositionType::Absolute, "Absolute Positioning"),
+        (PositionType::Relative, "Relative Positioning\nRelative Positioning"),
+        (PositionType::Absolute, "Absolute Positioning\nAbsolute Positioning"),
     ]
     .into_iter()
     .enumerate()
@@ -35,6 +35,7 @@ fn setup(mut commands: Commands) {
                             position_type,
                             ..default()
                         })
+                        
                         .with_background_color(Color::DARK_GREEN),
                 );
             });
