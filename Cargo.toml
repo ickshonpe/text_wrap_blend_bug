@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 bevy = { git = "https://github.com/bevyengine/bevy", rev = "670f3f0dce2ced27388b10672d30594d399434e1" }
+# bevy = { git = "https://github.com/ickshonpe/bevy", branch = "measure_debug" }
