@@ -60,6 +60,11 @@ fn setup(mut commands: Commands) {
 fn setup_unwrapped(mut commands: Commands) {
     for (i, (position_type, message, right)) in [
         (
+            PositionType::Relative,
+            "Relative Positioning\nRelative Positioning",
+            Val::Auto,
+        ),
+        (
             PositionType::Absolute,
             "Absolute Positioning\nAbsolute Positioning",
             Val::Auto,
